@@ -42,7 +42,7 @@ def stackImages(scale,imgArray):
     # 1. Input contains multiple rows. 
     #    For eg. Input -> ([I1, I2], [I3, I4]), ([I1], [I2]) etc.
     # 2. Input contains a single row. 
-    #    For eg. Input --> (I1, I2) etc.
+    #    For eg. Input --> ([I1, I2]) etc.
     if rowsAvailable:
         for x in range ( 0, rows):
             for y in range(0, cols):
