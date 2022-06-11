@@ -124,8 +124,6 @@ while True:
     success, img = cap.read()
     # img = cv2.resize(frameWidth, frameHeight)
     # cv2.imshow("Output", img)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
 
     imgHSV = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
     h_min = cv2.getTrackbarPos(HueMin, TrackBars)
@@ -146,5 +144,6 @@ while True:
 
     imgStack = stackImages(0.6,([img,imgHSV],[mask,imgResult]))
     cv2.imshow("Stacked Images", imgStack)
-
-    cv2.waitKey(1)
+    
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
